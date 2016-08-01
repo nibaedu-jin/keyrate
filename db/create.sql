@@ -2,7 +2,7 @@ create database keyrate;
 use keyrate;
 create table user(
   id int not null AUTO_INCREMENT,
-  name varchar(64) not null,
+  username varchar(64) not null unique,
   password varchar(128) not null,
   PRIMARY KEY (id)
 );
