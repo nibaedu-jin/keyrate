@@ -44,11 +44,11 @@
 				<fieldset>
 					<div style="font-size:2em;">
 						<div class="pure-form pure-form-stacked" >
-							<label for="Username">Username</label>
-							<input  id="" type="text" name="Username" value=""
+							<label for="username">Username</label>
+							<input  id="" type="text" name="username" value=""
 							onfocus = "show_desc()" onblur="hide_desc()"
-							placeholder="Username" style="font-size:0.7em;" pattern="[A-z]{4,16}" required/>
-							<span  id="userid_desc" class="desc" style="display:none;
+							placeholder="username" style="font-size:0.7em;" pattern="[A-z]{4,16}" required/>
+							<span id="userid_desc" class="desc" style="display:none;
 							font-size:0.5em;color:red">
 							1.不能为空</br>
 							2.不能低于4个符字不能大于16个字符</br>
@@ -57,10 +57,10 @@
 					</div>
 					<div class="pure-form pure-form-stacked">
 						<label for="password">Password</label>
-						<input id="" type="password" name="password" value=""
+						<input id="" type="password" name="password" value=""><!-- value=""
 						onfocus = "show_isthis()" onblur="hide_isthis()"
 						placeholder="Password" style="font-size:0.7em;"
-						pattern="[A-Za-z].*[0-9]|[0-9].*[A-Za-z]{6,12}" required/>
+						pattern="[A-Za-z].*[0-9]|[0-9].*[A-Za-z]{6,12}" required/>-->
 						<span id="userid_isthis" class="desc"
 						style="display:none; font-size:0.5em;color:red"  >
 						1.不能为空<br/>
