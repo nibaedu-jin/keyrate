@@ -12,3 +12,12 @@
 `share` -- 分享
 
 `upload` -- 上传
+
+## 文件
+`config.php` -- 数据库配置文件
+
+`create.sql` -- 建库语句
+
+`login.php` -- 登录界面
+
+`loginmanage.php` -- 处理登录请求
