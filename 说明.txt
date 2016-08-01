@@ -1,0 +1,26 @@
+1.登录
+2.上传
+3.排名
+4.分享
+
+phpinclude
+
+User:
+id 用户id
+username 用户名称
+password 密码
+
+Record:
+id 提交id
+userid 用户id
+picurl 图片地址
+record 成绩
+time 时间
+
+Share:
+id 分享id
+userid 用户id
+picurl 图片地址
+message 消息
+
+用户登录 -> 上传 -> 排行 -> 分享
