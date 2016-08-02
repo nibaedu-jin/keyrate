@@ -1,3 +1,7 @@
+<?PHP
+$img = $_GET['img'];
+$msg = $_GET()
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,11 +22,11 @@ body{background:url(http://s.qdcdn.com/cl/11300758,800,450.jpg);
 <br>
 <br>
 <center>
-  <img name="pic" src="qqq.gif" width="400" height="300" >
+  <img name="pic" src="<?PHP echo "$id"; ?>" width="400" height="300" >
 </form>
 <br>
 <b><p style="color:white; font-size:1.5em;">
-“我刚刚在<a href="http://192.168.1.101/dazidenglu.html"  style="text-decoration:none;">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
+<?PHP echo "string";?>
 </p>
 </b>
 <br>

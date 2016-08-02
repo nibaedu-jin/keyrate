@@ -70,7 +70,7 @@
       </table>
     </div>
     <div style="padding-left:600px;">
-      <form action="share/share.php" method="post">
+      <form action="../share/share.php" method="post">
       <style scoped>
       .button-success,
       {
