@@ -3,27 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>分享页面</title>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" href="../src/css/pure-min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../src/css/share.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 <div>
-<style scoped>
-body{background:url(http://s.qdcdn.com/cl/11300758,800,450.jpg);
-  padding-top:50px;
-}
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary {
-color: white;
-border-radius: 4px;
-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-.button-success {
-background: rgb(28, 184, 65);
-}
-
-</style>
 <form action="share.php" method="post">
 <h1 style="color:white";>分享给微信好友：</h1>
 <br>
