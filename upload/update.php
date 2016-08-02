@@ -21,11 +21,7 @@
       var height = image.height;
       var width = image.width;
       var filesize = image.filesize;
-<<<<<<< HEAD
     //  alert(height+"x.."+filesize);
-=======
-      alert(height+"x.."+filesize);
->>>>>>> 05e10a333cf4b9dcc6c7f2a2ed6f658a79dc9a63
       if(width>80 && height>80 && filesize>524288){
         alert('请上传80*80像素 或者大小小于500KB的图片');
         return false;
@@ -42,7 +38,7 @@
       <table border="3" style="color:blue;">
         <tr>
           <td>
-            <form action="upload_file.php"
+            <form action="uploadmanage.php"
             enctype="multipart/form-data" method="post" name="testForm">
             <fieldset>
               <p style=" font-family:STXingkai;  font-size : 4em; color:red;">请键入你的成绩:</p>
@@ -74,7 +70,7 @@
       </table>
     </div>
     <div style="padding-left:600px;">
-      <form action="192.168.1.133/fenxiang1.html" method="post">
+      <form action="share/share.php" method="post">
       <style scoped>
       .button-success,
       {
