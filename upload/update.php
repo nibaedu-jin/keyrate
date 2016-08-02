@@ -21,7 +21,7 @@
       var height = image.height;
       var width = image.width;
       var filesize = image.filesize;
-      alert(height+"x.."+filesize);
+    //  alert(height+"x.."+filesize);
       if(width>80 && height>80 && filesize>524288){
         alert('请上传80*80像素 或者大小小于500KB的图片');
         return false;
