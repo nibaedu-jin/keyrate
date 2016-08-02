@@ -40,11 +40,7 @@ body{background:url(http://s.qdcdn.com/cl/11300758,800,450.jpg);
 <br>
 <br>
 <center>
-<<<<<<< HEAD
   <img name="pic" src="<?php echo $imgurl; ?>" width="400" height="300" >
-=======
-  <img name="pic" src="<?PHP echo "$id"; ?>" width="400" height="300" >
->>>>>>> 7ed27ffec34b8730c3fb16e4a014b4ebf1c2c641
 </form>
 <br>
 <b><p style="color:white; font-size:1.5em;">
