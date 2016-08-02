@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>排名</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../css/ranking.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../src/css/ranking.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
   <center>
