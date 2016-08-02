@@ -6,6 +6,24 @@
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 </head>
 <body>
+<?php
+header('Content-type:text/html;charset=utf-8');
+include "../db/config.php";
+$id = $_GET['id'];
+$imgurl = "";
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
+
+$sql = "select picurl from share where id='".$id."' limit 1";
+// echo $sql;
+$result = mysqli_query($conn,$sql);
+while($row = mysqli_fetch_array($result)) {
+  // echo $row['picurl'];
+  $imgurl = $row['picurl'];
+}
+?>
+
+
 <div>
 <style scoped>
 body{background:url(http://s.qdcdn.com/cl/11300758,800,450.jpg);
@@ -18,7 +36,7 @@ body{background:url(http://s.qdcdn.com/cl/11300758,800,450.jpg);
 <br>
 <br>
 <center>
-  <img name="pic" src="qqq.gif" width="400" height="300" >
+  <img name="pic" src="<?php echo $imgurl; ?>" width="400" height="300" >
 </form>
 <br>
 <b><p style="color:white; font-size:1.5em;">
