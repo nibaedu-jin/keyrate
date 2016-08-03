@@ -14,36 +14,58 @@ $connect = mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
 if(!$connect){
   die('数据库连接失败，错误信息：'.mysqli_connect_error());
 }
-$sql = "select u.username,r.record,r.picurl from user as u, record as r where u.id=r.userid and u.id=".$userid;
+$sql = "select u.username,r.record,r.picurl,r.userid from user as u, record as r where u.id=r.userid and u.id=".$userid;
 //echo "$sql";
 $query = mysqli_query($connect, $sql);
 while($result = mysqli_fetch_array($query)){
   $username = $result["username"];
-  $imgurl =  $result["picurl"];
+  $imgurl = $result["picurl"];
   $record = $result["record"];
+  //$userid = $result["userid"];
 }
- ?>
+
+
+  $message = $_POST["msg"];
+if ($message !== null) {
+  $picurl = $_POST["picurl"];
+  $userid = $_POST["userid"];
+  $sql2 = "insert into share(userid,picurl,message) values ('".$userid."','".$picurl."','".$message."')";
+  //echo "$sql2";
+  $query = mysqli_query($connect, $sql2);
+  $insert = $connect->insert_id;
+  header("Location: QRcode.php?id=".$insert);
+}
+?>
 <div>
-<form action="share.php" method="post">
-<h1 style="color:white";>分享给微信好友：</h1>
-<br>
-<br>
-<br>
-<center>
-  <img name="pic" src="<?php echo $imgurl; ?>" width="400" height="300" >
-</form>
-<br>
-<p style="color:white; font-size:1.5em;">
-<span>@<?php echo $username ?>:</span>
-“我刚刚在<a href="http://192.168.1.101/dazidenglu.html" style="text-decoration:none;">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
-</p>
-<br>
-<br>
-<a href="QRcode.html">
-<summit class="button-success pure-button">生成二维码
-</summit>
-</a>
-</center>
+  <form id="msg" action="share.php" method="post">
+    <h1 style="color:white";>分享给微信好友：</h1>
+    <br>
+    <br>
+    <br>
+    <center>
+      <img name="pic" src="<?php echo "$imgurl"; ?>" width="400" height="300" >
+    <br>
+    <p style="color:white; font-size:1.5em;">
+      <h1>@<?php echo $username ?>:</h1>
+      <textarea name="msg" rows="8" cols="40">
+        “我刚刚在<a href="http://192.168.1.101/dazidenglu.html">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
+      </textarea>
+      <input type="hidden" name="picurl" value="<?php echo $imgurl; ?>">
+      <input type="hidden" name="userid" value="<?php echo $userid; ?>">
+    </p>
+    <br>
+    <br>
+    <a href="javascript: subform()">
+      <summit class="button-success pure-button">生成二维码
+      </summit>
+    </a>
+  </center>
+  </form>
 </div>
 </body>
+<script type="text/javascript">
+  function subform() {
+    document.forms["msg"].submit();
+  }
+</script>
 </html>

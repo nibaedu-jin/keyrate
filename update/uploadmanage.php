@@ -51,6 +51,11 @@ if ((($file["type"] == "image/gif")
 
 		$sql = "insert into record (userid,picurl,record,time) values('".$userid."','".$picurl."','".$grade."',now())";
 	//	echo $sql;
+		//	echo "文件存储在: " . $picurl;
+		}
+
+		$sql = "insert into record (userid,picurl,record,time) values('".$userid."','".$picurl."','".$grade."',now())";
+	//	echo $sql;
 		try{
 			// echo "11111";
 			$result = $db->query($sql);
