@@ -6,29 +6,23 @@
   <link rel="stylesheet" href="../src/css/pure-min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="../src/css/share.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
 <?php
+$userid=$_GET["userid"];
 include "../db/config.php";
-
-$img = $_GET['img'];
-$msg = $_GET['msg'];
-//  header('Content-type:text/html;charset=utf-8');
-
-$id = $_GET['id'];
-$imgurl = "";
-
-$conn = mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
-
-$sql = "select picurl from share where id='".$id."' limit 1";
-// echo $sql;
-$result = mysqli_query($conn,$sql);
-while($row = mysqli_fetch_array($result)) {
-// echo $row['picurl'];
-  $imgurl = $row['picurl'];
+// 连接数据库
+$connect = mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
+if(!$connect){
+  die('数据库连接失败，错误信息：'.mysqli_connect_error());
 }
-?>
-
-
+$sql = "select u.username,r.record,r.picurl from user as u, record as r where u.id=r.userid and u.id=".$userid;
+//echo "$sql";
+$query = mysqli_query($connect, $sql);
+while($result = mysqli_fetch_array($query)){
+  $username = $result["username"];
+  $imgurl =  $result["picurl"];
+  $record = $result["record"];
+}
+ ?>
 <div>
 <form action="share.php" method="post">
 <h1 style="color:white";>分享给微信好友：</h1>
@@ -40,6 +34,7 @@ while($row = mysqli_fetch_array($result)) {
 </form>
 <br>
 <p style="color:white; font-size:1.5em;">
+<span>@<?php echo $username ?>:</span>
 “我刚刚在<a href="http://192.168.1.101/dazidenglu.html" style="text-decoration:none;">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
 </p>
 <br>
