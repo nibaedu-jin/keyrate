@@ -20,7 +20,28 @@
         <th style="width:480px; "><h3>时间</h3></th>
       </tr>
       <?php
-      //TODO 列表
+
+      // 连接数据库
+      $connect = mysqli_connect(DB_HOST,DB_USER,DB_PWD,DB_NAME);
+      if(!$connect){
+        die('数据库连接失败，错误信息：'.mysqli_connect_error());
+      }
+      $sql = "select * from t_vote order by id desc";
+      //echo $sql;
+      $query = mysqli_query($connect, $sql);
+
+      while($result = mysqli_fetch_array($query)){
+        echo "<tr>";
+        echo "<td>" . $result["id"] . "</td>";
+        echo "<td>" . $result["name"] . "</td>";
+        echo "<td>" . $result["desc"] . "</td>";
+        echo "<td> <a href='vote.php?id=" . $result["id"] . "' >Vote</a> </td>";
+        echo "</tr>";
+      }
+
+      mysqli_close($connect);
+
+      ?>
       ?>
       <tr>
         <th>1</th>
