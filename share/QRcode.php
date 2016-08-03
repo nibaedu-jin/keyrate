@@ -1,3 +1,7 @@
+<?php
+$id = $_GET['id'];
+include "../db/config.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +23,7 @@
 
 <script type="text/javascript">
 jQuery('#qrcodeCanvas').qrcode({
-  text : "http://192.168.1.133/fenxiang2.html"
+  text : "<?php echo "http://".$dbhost."/share/show.php?id=".$id ?>"
 });
 
 </script>

@@ -30,10 +30,10 @@ if ((($file["type"] == "image/gif")
 	}
 	else
 	{
-		echo "上传文件名: " . $file["name"] . "<br>";
-		echo "文件类型: " . $file["type"] . "<br>";
-		echo "文件大小: " . ($file["size"] / 1024) . " kB<br>";
-		echo "文件临时存储的位置: " . $file["tmp_name"] . "<br>";
+	//	echo "上传文件名: " . $file["name"] . "<br>";
+	//	echo "文件类型: " . $file["type"] . "<br>";
+	//	echo "文件大小: " . ($file["size"] / 1024) . " kB<br>";
+	//	echo "文件临时存储的位置: " . $file["tmp_name"] . "<br>";
 
 		// 判断当期目录下的 upload 目录是否存在该文件
 		// 如果没有 upload 目录，你需要创建它，upload 目录权限为 777
@@ -46,11 +46,19 @@ if ((($file["type"] == "image/gif")
 			// 如果 upload 目录存在该文件则将文件上传到 upload 目录下
 			move_uploaded_file($file["tmp_name"], "upload/" . $file["name"]);
 			$picurl = "upload/" . $file["name"];
+<<<<<<< HEAD:update/uploadmanage.php
 			echo "文件存储在: " . $picurl;
 		}
 
 		$sql = "insert into record (userid,picurl,record,time) values('".$userid."','".$picurl."','".$grade."',now())";
 		echo $sql;
+=======
+		//	echo "文件存储在: " . $picurl;
+		}
+
+		$sql = "insert into record (userid,picurl,record,time) values('".$userid."','".$picurl."','".$grade."',now())";
+	//	echo $sql;
+>>>>>>> b68fb50e75826ffe4b3bb3a4dec31864903f1c56:update/uploadmanage.php
 		try{
 			// echo "11111";
 			$result = $db->query($sql);
@@ -65,4 +73,5 @@ else
 {
 	echo "非法的文件格式";
 }
+header("Location: ../ranking/ranking.php");
 ?>

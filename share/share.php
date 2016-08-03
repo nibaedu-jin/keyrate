@@ -6,9 +6,6 @@
   <link rel="stylesheet" href="../src/css/pure-min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="../src/css/share.css" media="screen" title="no title" charset="utf-8">
 </head>
-
-
-
 <?php
 $userid=$_GET["userid"];
 include "../db/config.php";
@@ -27,10 +24,7 @@ while($result = mysqli_fetch_array($query)){
   //$userid = $result["userid"];
 }
 
-?>
 
-
-<?php
   $message = $_POST["msg"];
 if ($message !== null) {
   $picurl = $_POST["picurl"];
@@ -38,6 +32,8 @@ if ($message !== null) {
   $sql2 = "insert into share(userid,picurl,message) values ('".$userid."','".$picurl."','".$message."')";
   //echo "$sql2";
   $query = mysqli_query($connect, $sql2);
+  $insert = $connect->insert_id;
+  header("Location: QRcode.php?id=".$insert);
 }
 ?>
 <div>
