@@ -1,14 +1,9 @@
-<?PHP
-$img = $_GET['img'];
-$msg = $_GET()
-?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>分享页面</title>
-  <link rel="stylesheet" href="../src/css/pure-min.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="../src/css/share.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 </head>
 <body>
 <?php
@@ -27,7 +22,14 @@ while($row = mysqli_fetch_array($result)) {
   $imgurl = $row['picurl'];
 }
 ?>
+
+
 <div>
+<style scoped>
+body{background:url(http://s.qdcdn.com/cl/11300758,800,450.jpg);
+  padding-top:50px;
+}
+</style>
 <form action="share.php" method="post">
 <br>
 <br>
@@ -38,7 +40,7 @@ while($row = mysqli_fetch_array($result)) {
 </form>
 <br>
 <b><p style="color:white; font-size:1.5em;">
-<?PHP echo "string";?>
+“我刚刚在<a href="http://192.168.1.101/dazidenglu.html"  style="text-decoration:none;">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
 </p>
 </b>
 <br>
