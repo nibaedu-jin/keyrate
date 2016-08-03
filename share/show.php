@@ -44,15 +44,9 @@ body{background:url(http://s.qdcdn.com/cl/11300758,800,450.jpg);
 </form>
 <br>
 <b><p style="color:white; font-size:1.5em;">
-<<<<<<< HEAD
 
 
 <?PHP echo $message ?>
-
-
-=======
-“我刚刚在<a href="http://192.168.1.101/dazidenglu.html"  style="text-decoration:none;">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
->>>>>>> 6b8af0c2c6224feff5ac350f0e91e2d8c81b93e2
 </p>
 </b>
 <br>
