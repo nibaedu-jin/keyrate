@@ -7,6 +7,28 @@
   <link rel="stylesheet" href="../src/css/share.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
+<?php
+include "../db/config.php";
+
+$img = $_GET['img'];
+$msg = $_GET['msg'];
+//  header('Content-type:text/html;charset=utf-8');
+
+$id = $_GET['id'];
+$imgurl = "";
+
+$conn = mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
+
+$sql = "select picurl from share where id='".$id."' limit 1";
+// echo $sql;
+$result = mysqli_query($conn,$sql);
+while($row = mysqli_fetch_array($result)) {
+// echo $row['picurl'];
+  $imgurl = $row['picurl'];
+}
+?>
+
+
 <div>
 <form action="share.php" method="post">
 <h1 style="color:white";>分享给微信好友：</h1>
@@ -14,7 +36,7 @@
 <br>
 <br>
 <center>
-  <img name="pic" src="qqq.gif" width="400" height="300" >
+  <img name="pic" src="<?php echo $imgurl; ?>" width="400" height="300" >
 </form>
 <br>
 <p style="color:white; font-size:1.5em;">
