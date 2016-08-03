@@ -14,15 +14,17 @@ header('Content-type:text/html;charset=utf-8');
 include "../db/config.php";
 $id = $_GET['id'];
 $imgurl = "";
+$message = "";
 
 $conn = mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
 
-$sql = "select picurl from share where id='".$id."' limit 1";
+$sql = "select picurl,message from share where id='".$id."' limit 1";
 // echo $sql;
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_array($result)) {
   // echo $row['picurl'];
   $imgurl = $row['picurl'];
+  $message = $row['message'];
 }
 ?>
 
@@ -40,7 +42,7 @@ while($row = mysqli_fetch_array($result)) {
 <b><p style="color:white; font-size:1.5em;">
 
 
-<?PHP echo "string";?>
+<?PHP echo $message ?>
 
 
 </p>
