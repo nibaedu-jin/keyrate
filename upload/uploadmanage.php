@@ -1,4 +1,6 @@
 <?php
+$grade=$_POST["grade"];
+$userid="1";
 
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");

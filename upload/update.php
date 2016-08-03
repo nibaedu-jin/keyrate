@@ -43,7 +43,7 @@
             <fieldset>
               <p style=" font-family:STXingkai;  font-size : 4em; color:red;">请键入你的成绩:</p>
 
-              <input name="number01" type="text" id="input"/ placeholder="必须输入纯数字" required/>
+              <input name="grade" type="text" id="input"/ placeholder="必须输入纯数字" required/>
               <script type="text/javascript">
               var text = document.getElementById("input");
               text.onkeyup = function(){
