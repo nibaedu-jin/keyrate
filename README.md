@@ -13,7 +13,9 @@
 
 `share` -- 分享
 
-`upload` -- 上传
+`upload` -- 上传后的地址
+
+`update` -- 上传
 
 ## 文件
 `config.php` -- 数据库配置文件

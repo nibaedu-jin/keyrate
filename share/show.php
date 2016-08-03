@@ -1,7 +1,3 @@
-<?PHP
-$img = $_GET['img'];
-$msg = $_GET()
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +7,8 @@ $msg = $_GET()
     <link rel="stylesheet" href="../src/css/share.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
+
+
 <?php
 header('Content-type:text/html;charset=utf-8');
 include "../db/config.php";
@@ -27,6 +25,8 @@ while($row = mysqli_fetch_array($result)) {
   $imgurl = $row['picurl'];
 }
 ?>
+
+
 <div>
 <form action="share.php" method="post">
 <br>
@@ -38,7 +38,11 @@ while($row = mysqli_fetch_array($result)) {
 </form>
 <br>
 <b><p style="color:white; font-size:1.5em;">
+
+
 <?PHP echo "string";?>
+
+
 </p>
 </b>
 <br>
