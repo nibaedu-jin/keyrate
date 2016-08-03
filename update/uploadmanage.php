@@ -1,17 +1,19 @@
 <?php
-$grade=$_POST["grade"];
-$userid="1";
+include "../db/config.php";  //连接数据库
+$grade=$_POST["grade"];     //取出输入的成绩
+$userid=$_POST["id"];       //取出用户的ID
+$picurl='';
 
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
-$temp = explode(".", $_FILES["uploadImg"]["name"]);
-echo $_FILES["uploadImg"]["size"];
+$temp = explode(".", $_FILES["pic"]["name"]);
+echo $_FILES["pic"]["size"];
 $extension = end($temp);     // 获取文件后缀名
 
 echo "#";
 echo $_FILES;
 echo "#";
-$file = $_FILES["uploadImg"];
+$file = $_FILES["pic"];
 
 if ((($file["type"] == "image/gif")
 	|| ($file["type"] == "image/jpeg")
@@ -43,8 +45,20 @@ if ((($file["type"] == "image/gif")
 		{
 			// 如果 upload 目录存在该文件则将文件上传到 upload 目录下
 			move_uploaded_file($file["tmp_name"], "upload/" . $file["name"]);
-			echo "文件存储在: " . "upload/" . $file["name"];
+			$picurl = "upload/" . $file["name"];
+			echo "文件存储在: " . $picurl;
 		}
+
+		$sql = "insert into record (userid,picurl,record,time) values('".$userid."','".$picurl."','".$grade."',now())";
+		echo $sql;
+		try{
+			// echo "11111";
+			$result = $db->query($sql);
+			// echo "222222";
+		}catch(PDOEeception $e){
+			echo $e->getMessage();
+		}
+
 	}
 }
 else
