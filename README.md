@@ -5,6 +5,8 @@
 ## 文件夹
 `db` -- 数据库相关
 
+`src` -- 资源文件
+
 `login` -- 登录
 
 `ranking` -- 排名
@@ -21,3 +23,5 @@
 `login.php` -- 登录界面
 
 `loginmanage.php` -- 处理登录请求
+
+`ranking.php` -- 排名
