@@ -48,7 +48,7 @@ if ($message !== null) {
     <p style="color:white; font-size:1.5em;">
       <h1>@<?php echo $username ?>:</h1>
       <textarea name="msg" rows="8" cols="40">
-        “我刚刚在<a href="http://192.168.1.101/dazidenglu.html">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
+        “我刚刚在http://dazidenglu.html练习了打字，速度又变快了，快来和我比赛吧！”
       </textarea>
       <input type="hidden" name="picurl" value="<?php echo $imgurl; ?>">
       <input type="hidden" name="userid" value="<?php echo $userid; ?>">
