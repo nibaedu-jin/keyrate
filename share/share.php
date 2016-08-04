@@ -32,6 +32,8 @@ while($result = mysqli_fetch_array($query)){
   $imgurl = $result["picurl"];
   $record = $result["record"];
 }
+
+// 接受提交给自己的值
   $message = $_POST["msg"];
 if ($message !== null) {
   $picurl = $_POST["picurl"];
