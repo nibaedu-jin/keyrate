@@ -6,9 +6,7 @@ if ($_SESSION['userid']==null) {
 <?php
 include "../db/config.php";  //连接数据库
 $grade=$_POST["grade"];     //取出输入的成绩
-$userid=$_POST["id"];       //取出用户的ID
-$picurl='';
-$userid='26';
+$userid=$_SESSION['userid'];
 
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
