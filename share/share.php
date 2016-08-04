@@ -4,6 +4,8 @@ if ($_SESSION['userid']==null) {
   header("Location: ../login/login.php");
 }
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +14,8 @@ if ($_SESSION['userid']==null) {
   <link rel="stylesheet" href="../src/css/pure-min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="../src/css/share.css" media="screen" title="no title" charset="utf-8">
 </head>
+
+
 <?php
 $userid=$_GET["userid"];
 include "../db/config.php";
@@ -27,19 +31,19 @@ while($result = mysqli_fetch_array($query)){
   $username = $result["username"];
   $imgurl = $result["picurl"];
   $record = $result["record"];
-  //$userid = $result["userid"];
 }
   $message = $_POST["msg"];
 if ($message !== null) {
   $picurl = $_POST["picurl"];
   $userid = $_POST["userid"];
   $sql2 = "insert into share(userid,picurl,message) values ('".$userid."','".$picurl."','".$message."')";
-  //echo "$sql2";
   $query = mysqli_query($connect, $sql2);
   $insert = $connect->insert_id;
   header("Location: QRcode.php?id=".$insert);
 }
 ?>
+
+
 <div>
   <form id="msg" action="share.php" method="post">
     <h1 style="color:white";>分享给微信好友：</h1>
