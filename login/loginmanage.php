@@ -6,11 +6,9 @@ include "../db/config.php";
 //新建变量，并将指赋为在Post中拿到的指
 $username = $_POST['username'];
 $password = $_POST['password'];
-$id= $_GET['id']
 
 //sql语句
-$sql = "select username from user where username='".$username."
-' and password='".$password."' limit 1";
+$sql = "select username from user where username='".$username."' and password='".$password."' limit 1";
 
 $result = $db->query($sql) or die('数据库连接失败，错误信息：');
 

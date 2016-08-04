@@ -81,7 +81,6 @@
         background: rgb(66, 184, 221);
       }
       </style>
-      <button class="button-success pure-button" >分享你的成绩！</button>
     </form>
   </div>
 </body>

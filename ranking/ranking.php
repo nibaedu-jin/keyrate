@@ -29,6 +29,7 @@
       }
       //$sql = "select * from record";
       $sql = "select u.username,r.id,r.record,r.time,r.userid from record as r,user as u where r.userid = u.id order by r.record desc";
+      
       $query = mysqli_query($connect, $sql);
       //$sql2 = "select * from user order by '" . $result[userid] . "' desc";
       //$query = mysqli_query($connect, $sql2);
@@ -55,6 +56,6 @@
     <a href="javascript:void(0);" onclick="window.open('http://dazi.kukuw.com/');"class="button">继续练习</a>
   </body>
   <script type="text/javascript">
-    document.getElementById('no1').innerHTML="<?PHP echo $no1?>";
+    document.getElementById('no1').innerHTML="<?PHP echo $no1;?>";
   </script>
 </html>
