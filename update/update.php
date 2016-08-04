@@ -38,8 +38,7 @@
       <table border="3" style="color:blue;">
         <tr>
           <td>
-            <form action="uploadmanage.php"
-            enctype="multipart/form-data" method="post" name="testForm">
+            <form action="uploadmanage.php" enctype="multipart/form-data" method="post" name="testForm">
             <fieldset>
               <p style=" font-family:STXingkai;  font-size : 4em; color:red;">请键入你的成绩:</p>
 
