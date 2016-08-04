@@ -23,8 +23,6 @@ while($result = mysqli_fetch_array($query)){
   $record = $result["record"];
   //$userid = $result["userid"];
 }
-
-
   $message = $_POST["msg"];
 if ($message !== null) {
   $picurl = $_POST["picurl"];
@@ -46,10 +44,8 @@ if ($message !== null) {
       <img name="pic" src="<?php echo "$imgurl"; ?>" width="400" height="300" >
     <br>
     <p style="color:white; font-size:1.5em;">
-      <h1>@<?php echo $username ?>:</h1>
-      <textarea name="msg" rows="8" cols="40">
-        “我刚刚在<a href="http://192.168.1.101/dazidenglu.html">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”
-      </textarea>
+      <h2>@<?php echo $username ?>:</h2>
+      <textarea name="msg" rows="6" cols="60">“我刚刚在<a href="http://192.168.1.101/dazidenglu.html">http://dazidenglu.html</a>练习了打字，速度又变快了，快来和我比赛吧！”</textarea>
       <input type="hidden" name="picurl" value="<?php echo $imgurl; ?>">
       <input type="hidden" name="userid" value="<?php echo $userid; ?>">
     </p>

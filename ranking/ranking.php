@@ -29,6 +29,7 @@
       }
       //$sql = "select * from record";
       $sql = "select u.username,r.id,r.record,r.time,r.userid from record as r,user as u where r.userid = u.id order by r.record desc";
+      
       $query = mysqli_query($connect, $sql);
       //$sql2 = "select * from user order by '" . $result[userid] . "' desc";
       //$query = mysqli_query($connect, $sql2);
