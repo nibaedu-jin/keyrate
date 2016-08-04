@@ -55,6 +55,6 @@
     <a href="javascript:void(0);" onclick="window.open('http://dazi.kukuw.com/');"class="button">继续练习</a>
   </body>
   <script type="text/javascript">
-    document.getElementById('no1').innerHTML="<?PHP echo $no1?>";
+    document.getElementById('no1').innerHTML="<?PHP echo $no1;?>";
   </script>
 </html>
