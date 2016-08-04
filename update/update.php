@@ -1,8 +1,9 @@
 <?php
-session_start();
-echo "###";
-echo $_SESSION['userid'];
-
+//session_start();
+//echo $_SESSION['userid'];
+// echo "#";
+// echo session_status();
+// echo "#";
 if ($_SESSION['userid']==null) {
   //header("Location: ../login/login.php");
 }
