@@ -1,4 +1,9 @@
 <?php
+if ($_SESSION['userid']==null) {
+  header("Location: ../login/login.php");
+}
+?>
+<?php
 $id = $_GET['id'];
 include "../db/config.php";
 ?>

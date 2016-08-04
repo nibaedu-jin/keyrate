@@ -1,9 +1,12 @@
 <?php
+if ($_SESSION['userid']==null) {
+  header("Location: ../login/login.php");
+}
+?>
+<?php
 include "../db/config.php";  //连接数据库
 $grade=$_POST["grade"];     //取出输入的成绩
-$userid=$_POST["id"];       //取出用户的ID
-$picurl='';
-$userid='26';
+$userid=$_SESSION['userid'];
 
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
@@ -66,5 +69,5 @@ else
 {
 	echo "非法的文件格式";
 }
-//header("Location: ../ranking/ranking.php");
+header("Location: ../ranking/ranking.php");
 ?>

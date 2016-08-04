@@ -4,5 +4,3 @@ $dbhost="192.168.1.125";
 $dbname="keyrate";
 $dbuser="root";
 $dbpwd="pwd";
-// 链接字符串
-$db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';charset=utf8', $dbuser, $dbpwd);
