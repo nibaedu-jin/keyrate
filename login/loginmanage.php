@@ -15,27 +15,18 @@ if(!$connect){
 }
 //sql语句
 $sql = "select id,username from user where username='".$username."' and password='".$password."' limit 1";
-echo "$sql";
+//echo "$sql";
 $query = mysqli_query($connect, $sql);
+
 while($result = mysqli_fetch_array($query)){
-  $userid = $result['id'];
-  $_SESSION['userid'] = $userid;
-  echo "$userid";
+ $userid = $result['id'];
+ $_SESSION['userid'] = $userid;
+ //echo $_SESSION['userid'];
 }
-
-// echo $_SESSION['userid'];
-// echo "#";
-// echo session_status();
-// echo "#";
-if($userid !== null){
-  //echo $sql;
-  //登录成功
-  header("Location: ../update/update.php");
-
-  exit;
-} else {
+if($userid == null){
   echo ('登录失败！点击此处 <a href="javascript:history.back(-1);">返回</a> 重试');
   exit;
+}else{
+  header("Location: ../update/update.php");
 }
-
 ?>

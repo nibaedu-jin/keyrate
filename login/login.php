@@ -32,13 +32,12 @@
 	<h1>
 		<center>
 			<span style="text-shadow:5px 5px 5px #Ff0000;">
-				Account management platform
+				loginmanage
 			</span>
 		</center>
 		<h1>
 			<h2>
 				<p>
-					AMP
 				</p>
 			</h2>
 			<form  action="loginmanage.php" method="post" >

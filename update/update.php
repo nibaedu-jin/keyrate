@@ -1,6 +1,6 @@
 <?php
-//session_start();
-//echo $_SESSION['userid'];
+session_start();
+echo $_SESSION['userid'];
 // echo "#";
 // echo session_status();
 // echo "#";
@@ -72,7 +72,7 @@ if ($_SESSION['userid']==null) {
                     <input type="submit" name="s1" value="确认提交">
                   </div>
                 </center>
-              </fieldset>
+               </fieldset>
             </form>
           </td>
         </tr>
