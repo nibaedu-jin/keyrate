@@ -1,9 +1,3 @@
-<?php
-session_start();
-if ($_SESSION['userid']==null) {
-  header("Location: ../login/login.php");
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
