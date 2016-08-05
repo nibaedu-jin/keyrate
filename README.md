@@ -27,3 +27,15 @@
 `loginmanage.php` -- 处理登录请求
 
 `ranking.php` -- 排名
+
+`share.php` -- 分享到二维码
+
+`show.php` -- 展示分享
+
+`QRcode.php` -- 生成二维码
+
+`update.php` -- 上传文件
+
+`uploadmanage.php` -- 上传文件的处理
+
+`index.php` -- 仅跳转
