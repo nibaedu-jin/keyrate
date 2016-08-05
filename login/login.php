@@ -36,10 +36,10 @@
 			</span>
 		</center>
 		<h1>
-			<h2>
-				<p>
-				</p>
-			</h2>
+		<h2>
+		<p>
+		</p>
+		</h2>
 			<form  action="loginmanage.php" method="post" >
 				<fieldset>
 					<div style="font-size:2em;">
@@ -78,6 +78,7 @@
 					</div>
 				</div>
 			</fieldset>
+			<center><img src="../src/img/pikachu.gif"></center>
 		</form>
 	</body>
-	</h
+	</html>
