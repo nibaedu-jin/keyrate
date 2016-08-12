@@ -1,84 +1,30 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Account management platform</title>
-</head>
-<body>
-	<script >
+  <head>
+    <meta charset="utf-8">
+    <title>register</title>
+    <link rel="stylesheet" href="../src/css/loginstyle.css" type="text/css">
+  </head>
+  <body>
+    <div class="c11">
+  <span id=s1>Login</span>
+  <span id=s2>打字排名系统</span>
+    </div>
+    <div class="c12">
+      <form class="f1" action="loginmanage.php" method="post">
+        <input class="i1" type="text" name="username" placeholder="username" required>
+        </br></br>
+        <input class="i1" type="password" name="password" placeholder="password" required>
+        <br/>
+        </br>
+				<label>
+        <input type="submit" name="" value="登录">
+        &nbsp  &nbsp  &nbsp
+        <span style=font-size:10px;>还没有账户?请</span>
+        <a href="register.html">注册</a>
+      </form>
+    </div>
 
-	function show_desc(){
-		var desc = document.getElementById("userid_desc");
-		desc.style.display = "block";
-	}
-	function hide_desc(){
-		var desc = document.getElementById("userid_desc");
-		desc.style.display = "none";
-		console.log("userid_desc");
-	}
 
-	function show_isthis(){
-		var desc = document.getElementById("userid_isthis");
-		desc.style.display = "block";
-	}
-	function hide_isthis(){
-		var desc = document.getElementById("userid_isthis");
-		desc.style.display = "none";
-		console.log("userid_isthis");
-	}
-
-	</script>
-	<h1>
-		<center>
-			<span style="text-shadow:5px 5px 5px #Ff0000;">
-				loginmanage
-			</span>
-		</center>
-		<h1>
-		<h2>
-		<p>
-		</p>
-		</h2>
-			<form  action="loginmanage.php" method="post" >
-				<fieldset>
-					<div style="font-size:2em;">
-						<div class="pure-form pure-form-stacked" >
-							<label for="username">Username</label>
-							<input  id="" type="text" name="username" value=""
-							onfocus = "show_desc()" onblur="hide_desc()"
-							placeholder="username" style="font-size:0.7em;" pattern="[A-z]{4,16}" required/>
-							<span id="userid_desc" class="desc" style="display:none;
-							font-size:0.5em;color:red">
-							1.不能为空</br>
-							2.不能低于4个符字不能大于16个字符</br>
-							3.只允许英文</br>
-						</span>
-					</div>
-					<div class="pure-form pure-form-stacked">
-						<label for="password">Password</label>
-						<input id="" type="password" name="password" value=""><!-- value=""
-						onfocus = "show_isthis()" onblur="hide_isthis()"
-						placeholder="Password" style="font-size:0.7em;"
-						pattern="[A-Za-z].*[0-9]|[0-9].*[A-Za-z]{6,12}" required/>-->
-						<span id="userid_isthis" class="desc"
-						style="display:none; font-size:0.5em;color:red"  >
-						1.不能为空<br/>
-						2.必须字母数字组合<br/>
-						3.长度不小于6位不大于12位<br/>
-					</span>
-				</div>
-				<div class="pure-form pure-form-stacked">
-					<label for="remember" class="pure-checkbox">
-						<input id="remember" type="checkbox"> Remember me</label>
-					</div>
-					<div class="pure-form pure-form-stacked">
-
-						<input type="submit" name="" value="Sign in" style="font-size:0.7em;">
-					</div>
-				</div>
-			</fieldset>
-			<center><img src="../src/img/pikachu.gif"></center>
-		</form>
-	</body>
-	</html>
+  </body>
+</html>

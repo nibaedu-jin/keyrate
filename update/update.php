@@ -13,7 +13,7 @@ if ($_SESSION['userid']==null) {
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="../src/css/upload.css" type="text/css">
   <style type="text/css">
   html,body{margin:0; padding:20px;}
   </style>

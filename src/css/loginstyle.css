@@ -12,7 +12,7 @@ body {
   display: table;
   background-repeat:no-repeat;
   font-family: "Raleway", sans-serif; }
-  
+
     .c11{
       position:absolute;
       left:520px;
@@ -48,4 +48,7 @@ body {
     .i1{
       height:25px;
       width:180px;
+    }
+    #remember{
+      font-size:14px;
     }
