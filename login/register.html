@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>register</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <script >
+
+    function show_desc(){
+      var desc = document.getElementById("userid_desc");
+      desc.style.display = "block";
+    }
+    function hide_desc(){
+      var desc = document.getElementById("userid_desc");
+      desc.style.display = "none";
+      console.log("userid_desc");
+    }
+
+    function show_isthis(){
+      var desc = document.getElementById("userid_isthis");
+      desc.style.display = "block";
+    }
+    function hide_isthis(){
+      var desc = document.getElementById("userid_isthis");
+      desc.style.display = "none";
+      console.log("userid_isthis");
+    }
+
+    </script>
+    <div class="c11">
+  <span id=s1>Register</span>
+  <span id=s2>用户注册页面</span>
+    </div>
+    <div class="c12">
+      <form class="f1" action="registermanage.php" method="post">
+        <input class="i1" type="text" name="username" placeholder="请填写用户名"
+        onfocus = "show_desc()" onblur="hide_desc()" pattern="[A-z]{4,16}" required>
+        <span id="userid_desc" class="desc" style="display:none;
+        font-size:0.5em;color:red">
+        1.不能为空</br>
+        2.不能低于4个符字不能大于16个字符</br>
+        3.只允许英文</br>
+        </span>
+        </br></br>
+        <input class="i1" type="password" name="password" placeholder="请填写密码"
+        onfocus = "show_isthis()" onblur="hide_isthis()" required>
+        <span id="userid_isthis" class="desc"
+        style="display:none; font-size:0.5em;color:red"  >
+        不能为空</span><br/>
+        </br>
+        <input type="submit" name="" value="提交">
+        &nbsp  &nbsp  &nbsp
+        <span style=font-size:10px;>如果已有账户请</span>
+        <a href="login.html">登录</a>
+      </form>
+    </div>
+
+
+  </body>
+</html>

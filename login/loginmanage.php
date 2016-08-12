@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 //给浏览器的HTML头 设置为utf-8格式
 header('Content-type:text/html;charset=utf-8');
 //数据库连接 使用dbo方式

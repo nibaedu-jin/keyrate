@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['userid']==null) {
-  header("Location: ../login/login.php");
+ header("Location: ../login/login.php");
 }
 ?>
 <!DOCTYPE html>
@@ -14,11 +14,11 @@ if ($_SESSION['userid']==null) {
 </head>
 <body>
   <center>
-    <div id="grad1"><h1> 打 字 排 名 </h1></div>
+    <div id="grad1"><h1> 光 荣 榜  </h1></div>
     <h2>目前<span id="no1">username</span>获得第一名</h2>
   </center>
-  <div align="center" style="border:4px solid red">
-    <table border="8" cellspacing="10px" cellspacing="10px">
+  <div align="center">
+    <table border="1" cellspacing="10px" >
       <tr>
         <th style="width:200px; "><h3>名次</h3></th>
         <th style="width:300px; "><h3>用户名</h3></th>

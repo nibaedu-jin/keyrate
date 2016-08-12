@@ -1,0 +1,98 @@
+html, body {
+  width: auto;
+  height: 100%; }
+body {
+    padding: 3em 15px;
+    background-image: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -webkit-linear-gradient(108deg, #26d0ce, #1a2980 90%);
+    background-image: -moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -moz-linear-gradient(108deg, #26d0ce, #1a2980 90%);
+    background-image: -ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -ms-linear-gradient(108deg, #26d0ce, #1a2980 90%);
+    display: table;
+    background-repeat:no-repeat;
+    font-family: "Raleway", sans-serif; }
+.c11{
+    position:absolute;
+    left:320px;
+    top:100px;
+    width:800px;
+    height:30px;}
+@font-face{
+    font-family:myFon;
+    src:url('书体坊邓小平字体.ttf');}
+#s1{
+    font-size:6em;
+    color: #ffffff;
+    font-family:myFon;}
+#center{ MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }
+.c12{
+    background-color:#5555FF;
+    position:absolute;
+    left:380px;
+    top:140px;
+    width:215px;
+    height:90px;
+    margin:150px;
+    padding:50px;
+    border-bottom-left-radius:15px;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;}
+.c2{
+    float:right;
+    margin:-43px;
+    padding: -3px;}
+.a-upload{
+    position: relative;
+    top: 18px;
+    right: 43px;}
+.className{
+    position: relative;
+    top: 23px;
+    right: 43px;}
+.a-upload {
+    padding: 2px 6px; /*內边距*/
+    line-height: 30px;/*行高*/
+    width:285px;
+    height:50px;
+    text-align:center;
+    font-size: 2em;
+    /*font-family: myFon;*/
+    background-color:#c0c0c0;
+    cursor: pointer; /*光标呈现为指示链接的指针（一只手）*/
+    color: #0066ff;
+    border: 1px solid blue;
+    border-radius: 10px; /*圆角*/
+    overflow: hidden; /* 溢出内容会被修剪，但是浏览器不会显示供查看内容的滚动条*/
+    display: inline-block;} /* display 属性规定元素应该生成的框的类型  行内块元素*/
+
+  .a-upload  input {
+    position: absolute; /*绝对定位*/
+    opacity: 0; /*不透明级别*/
+    filter: alpha(opacity=0); /*不透明级别*/
+    cursor: pointer;}     /*光标呈现为指示链接的指针（一只手）*/
+  .text{
+    padding: 0px 20px; /*內边距*/
+    line-height: 20px;/*行高*/
+    height:35px;
+    width:295px;
+    color: #5599ff;
+    border: 1px solid #ccc;
+    background-color:#c0c0c0;
+    /*text-align:center;*/
+    padding: 7px 0px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    /*font-family: myFon;*/
+    padding-left:5px;
+    border: 1px solid blue;}
+  .className{
+    line-height: 30px;/*行高*/
+    line-height:50px;
+    border-radius: 10px;
+    height:50px;
+    width:302px;
+    color:#ccc;
+    cursor: pointer; /*光标呈现为指示链接的指针（一只手）*/
+    font-size: 3em;
+    background-color:#7700FF;
+    font-size:16px;
+    border:1px solid blue;}

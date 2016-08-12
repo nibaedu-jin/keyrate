@@ -1,15 +1,58 @@
-body{
-  background:url(../img/11300758,800,450.jpg);
-  padding-top:50px;
-}
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary {
-color: white;
-border-radius: 4px;
-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-.button-success {
-background: rgb(28, 184, 65);
-}
+
+  body {
+  padding: 3em 15px;
+  background-image: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -webkit-linear-gradient(108deg, #26d0ce, #1a2980 90%);
+  background-image: -moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -moz-linear-gradient(108deg, #26d0ce, #1a2980 90%);
+  background-image: -ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -ms-linear-gradient(108deg, #26d0ce, #1a2980 90%);
+  overflow: hidden;
+  background-repeat:no-repeat;
+  font-family: "Raleway", sans-serif; }
+  .button-success,
+  .button-error,
+  .button-warning,
+  .button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  .img{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    left: 200px;
+    border: 2px solid #DBDBDB;
+  }
+  .paper{
+    width: auto;
+    height: auto;
+  }
+  .username{
+    color: white;
+    position: relative;
+    top: -330px;
+    right: -650px;
+  }
+  .text{
+    position: relative;
+    bottom: 330px;
+    left: 650px;
+  }
+  .button{
+    position: relative;
+    bottom: 385px;
+    right: -975px;
+  }
+  #txt{
+    width: 400px;
+    height: 246px;
+    resize: none;
+    border:3px solid #DBDBDB;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline:none;
+    font-size: 15px;
+
+
+  }
