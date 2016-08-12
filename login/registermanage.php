@@ -13,6 +13,6 @@ if(!$connect){
 $sql = "insert into user(username,password) values ('".$username."','".$password."')";
 //echo "$sql";
 $query = mysqli_query($connect, $sql);
-header("Location: login.html")
+header("Location: login.php")
 
  ?>

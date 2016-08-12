@@ -49,7 +49,7 @@ if ($_SESSION['userid']==null) {
   <div class="c12">
     <form action="uploadmanage.php" id='center' enctype="multipart/form-data" method="post" name="testForm">
       <div class="c2">
-        <input class="text" name="username" type="text" id="input" placeholder=输入你的成绩 required/>
+        <input class="text" name="grade" type="text" id="input" placeholder=输入你的成绩 required/>
       </div>
         <script type="text/javascript">
            var text = document.getElementById("input");

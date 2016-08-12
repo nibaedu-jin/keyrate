@@ -17,8 +17,8 @@ if ($_SESSION['userid']==null) {
     <div id="grad1"><h1> 光 荣 榜  </h1></div>
     <h2>目前<span id="no1">username</span>获得第一名</h2>
   </center>
-  <div align="center">
-    <table border="1" cellspacing="10px" >
+  <div class="tabletext" align="center">
+    <table id="table" border="1" cellspacing="0"  >
       <tr>
         <th style="width:200px; "><h3>名次</h3></th>
         <th style="width:300px; "><h3>用户名</h3></th>
@@ -26,6 +26,7 @@ if ($_SESSION['userid']==null) {
         <th style="width:240px; "><h3>时间</h3></th>
         <th style="width:240px; "><h3>分享</h3></th>
       </tr>
+
       <?php
       include "../db/config.php";
       // 连接数据库
@@ -43,7 +44,7 @@ if ($_SESSION['userid']==null) {
       $ranking = 1;
       while($result = mysqli_fetch_array($query)){
         echo "<tr>";
-        echo "<th>" . $ranking . "</th>";
+        echo "<th >" . $ranking . "</th>";
         echo "<th>" . $result["username"] . "</th>";
         echo "<th>" . $result["record"] . "KPM</th>";
         echo "<th>" . $result["time"] . "</th>";
@@ -59,6 +60,7 @@ if ($_SESSION['userid']==null) {
 
       ?>
     </table>
+  </div>
     <a href="javascript:void(0);" onclick="window.open('http://dazi.kukuw.com/');"class="button">继续练习</a>
   </body>
   <script type="text/javascript">
